@@ -1,0 +1,19 @@
+apiVersion: automation.cloudbees.io/v1alpha1
+kind: workflow
+name: prod
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    steps:
+      - uses: cloudbees-io/register-deployed-artifact@v2
+        with:
+          labels: env-one
+          artifact-id: 7b44a5e8-d461-452f-bb22-e8fbd734a288
+          target-environment: QA
+      - uses: cloudbees-io/register-deployed-artifact@v2
+        with:
+          labels: env-two
+          artifact-id: 7b44a5e8-d461-452f-bb22-e8fbd734a288
+          target-environment: testqa
