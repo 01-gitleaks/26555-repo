@@ -10,7 +10,7 @@ jobs:
       - uses: cloudbees-io/register-deployed-artifact@v2
         with:
           labels: env-one
-          artifact-id: 7b44a5e8-d461-452f-bb22-e8fbd734a288
+          artifact-id: ecbb4e8d-36b9-43af-99c0-82e7babbf32b
           target-environment: QA
       - uses: cloudbees-io/register-deployed-artifact@v2
         with:
